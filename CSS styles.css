@@ -60,3 +60,86 @@ footer {
     width: 100%;
     bottom: 0;
 }
+/* General reset and container styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pinterest-container {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Grid Item styling */
+.pinterest-item {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.pinterest-item:hover {
+    transform: scale(1.05);
+}
+
+/* Image styling */
+.pinterest-item img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s;
+}
+
+.pinterest-item:hover img {
+    opacity: 0.7;
+}
+
+/* Overlay for hovering effect */
+.pinterest-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pinterest-item:hover .pinterest-overlay {
+    opacity: 1;
+}
+
+/* Button styling */
+.pinterest-overlay .save-btn {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.pinterest-overlay .save-btn:hover {
+    background-color: #cc0000;
+        }
